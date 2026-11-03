@@ -19,13 +19,18 @@ The work combines the two-body fragment molecular orbital method (FMO2) with sam
 The datasets include:
 - Water trimer, STO-3G: four methods on `ibm_marrakesh`
 - Carmofur bound to SARS-CoV-2 Mpro, STO-3G: two QVM methods on `ibm_marrakesh`, and the classical and quantum seed comparison
-- Carmofur bound to SARS-CoV-2 Mpro, 6-31G: FMO-QVM-HCI-HSQD on `ibm_boston` with 52 qubits per dimer
+
 
 ---
 
 ## Authors
-- Pradeep Ramesh
+- R. Pradeep
 - Anurag Chaudhary
+- Ashish Kumar Patra
+- Anurag K.S.V.
+- Ruchika Bhat
+- Sai Shankar P.
+- G. Jaiganesh
 
 **Affiliation:** Qclairvoyance Quantum Labs Pvt. Ltd.
 
@@ -51,14 +56,7 @@ The datasets include:
 - Reference: FMO-CASCI
 - Also contains the data for the classical and quantum seed comparison on dimer 1-3
 
-### Carmofur-Mpro, 6-31G
-`data/carmofur_631g/`
 
-- Active spaces: monomers (26e,26o) on 26 qubits, dimers (52e,52o) on 52 qubits
-- `ibm_boston`, 500,000 shots per fragment, all ten fragments in a single batched QVM job
-- Method: FMO-QVM-HCI-HSQD with second-order perturbative correction
-- References: FMO-HCI at a tighter selection threshold, FMO-CCSD(T)
-- The measured bitstrings for this system exceed the GitHub file size limit and are available only on Zenodo.
 
 Each system folder contains:
 - `*.inp` — OpenFMO input (geometry, fragmentation, active space)
@@ -74,11 +72,6 @@ Each system folder contains:
 - Bitstrings follow the Qiskit ordering: the rightmost bit is qubit 0 and active orbital 0.
 - SQD bitstrings contain both spin sectors, with the beta string on the left and the alpha string on the right.
 - HCI-HSQD bitstrings encode a single spin string.
-
----
-
-## Notes
-In the carmofur model, the Cys145 to ligand S-C bond is not treated as a fragment bond. Both sides are capped with hydrogen atoms, as recorded in the geometry and input files. All solvers and reference methods use the same fragment Hamiltonians.
 
 ---
 
@@ -117,5 +110,8 @@ This dataset is licensed under the Creative Commons Attribution 4.0 Internationa
 ## Citation
 If you use this dataset, please cite the article and the dataset:
 
-- Article: https://arxiv.org/abs/2610.41986
-- Dataset: Zenodo, https://zenodo.org/records/23909476
+R. Pradeep, Anurag Chaudhary, Ashish Kumar Patra, Anurag K.S.V., Ruchika Bhat, Sai Shankar P., G. Jaiganesh (2026).
+*Resource efficient Sample Based Quantum Simulation through Fragmentation and Virtual Partitioning of QPU*.
+arXiv:2610.41986. https://doi.org/10.48550/arXiv.2610.41986
+
+Dataset: Zenodo, https://zenodo.org/records/23909476
